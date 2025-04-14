@@ -12,7 +12,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(update.message.text)
 
 def main():
-    app = ApplicationBuilder().token("8090199943:AAGoa6y9BhqtNZgUZGi1ywr_0uCPV4AjxFQ").build()
+    app = ApplicationBuilder().token("8090199943:AAGoa6y9BhqtNZgUZGi1ywr_OuCPV4AjxFQ").build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
     app.run_polling()
